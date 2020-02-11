@@ -1,12 +1,11 @@
 import '../styles/application.scss';
 import {connect} from '../services';
-import React, {PureComponent} from 'react';
+import React from 'react';
 
 // The below line is here as an example of getting prices
-connect('AAPL');
+connect('AAPLEddfff');
 
-class App extends PureComponent {
-    render() {
+const App = () => {
         return (
             <div className="stock-ticker">
                 <h1>Stock Blotter</h1>
@@ -14,7 +13,6 @@ class App extends PureComponent {
 
             </div>
         );
-    }
 }
 
 export default App;
