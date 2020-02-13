@@ -36,7 +36,7 @@ function getQuote(socket, ticker) {
   quote.ticker = ticker;
   quote.exchange = 'NASDAQ';
   quote.price = getRandomValBetween(100, 300, 2);
-  quote.change = getRandomValBetween(0, 200, 2);
+  quote.change = getRandomValBetween(-200, 200, 2);
   quote.change_percent = getRandomValBetween(0, 1, 2);
   quote.last_trade_time = getUTCDate();
   quote.dividend = getRandomValBetween(0, 1, 2);

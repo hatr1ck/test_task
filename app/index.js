@@ -5,7 +5,7 @@ import { configureStore, history } from './store/configureStore';
 import Root from './containers/Root';
 
 const store = configureStore();
-
+export default store;
 render(
     <AppContainer>
         <Root store={store} history={history} />

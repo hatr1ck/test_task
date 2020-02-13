@@ -79,6 +79,13 @@ module.exports = {
         }, {
             test: /\.json?$/,
             loader: 'json'
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+        ]
         }, {
             test: /\.scss$/,
             // we extract the styles into their own .css file instead of having
