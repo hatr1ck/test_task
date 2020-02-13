@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { configureStore, history } from './store/configureStore';
 import Root from './containers/Root';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore();
 export default store;
