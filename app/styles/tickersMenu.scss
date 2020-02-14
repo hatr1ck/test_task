@@ -1,0 +1,42 @@
+.tickersMenu {
+    background-color:black;
+    width:100%;
+    height:60px;
+    box-shadow: 0px 0px 15px rgb(142, 142, 142);
+    position: relative;
+    top:0px;
+    display: flex;
+    padding: 10px;
+    .title {
+        color: white;
+        flex:1;
+        margin: 0 2px;
+    }
+    .tickerNameInput{
+        font-size:20px;
+        height: 40px;
+        margin: 0 2px;
+        flex:2;
+    }
+    .dropdown{
+        height: 40px;
+        width: 170px;
+        margin: 0 2px;
+    }
+}
+.tickersContainer{
+    color:rgb(206, 206, 206);
+    div{
+        &:nth-child(2n){
+            background-color: rgb(32, 32, 32);
+        }
+        &:nth-child(1){
+            background-color: black;
+            padding:10px 0;
+            color: white;
+            .changePos {
+                color: white;
+            }
+        }
+    }
+}

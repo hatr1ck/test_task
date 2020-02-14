@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-import PropTypes from 'prop-types';
 import '../styles/ticker.scss';
 
 class Ticker extends PureComponent {
@@ -22,16 +21,5 @@ class Ticker extends PureComponent {
         );
     }
 }
-
-Ticker.propTypes = {
-    ticker: PropTypes.string,
-    exchange: PropTypes.string,
-    price: PropTypes.string,
-    change: PropTypes.string,
-    change_percent: PropTypes.string,
-    last_trade_time: PropTypes.string,
-    spanidend: PropTypes.string,
-    yield: PropTypes.string
-};
 
 export default Ticker;

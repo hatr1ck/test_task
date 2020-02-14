@@ -4,14 +4,14 @@ import {connect} from '../services';
 import Button from 'react-bootstrap/Button';
 import Dropdown from './Dropdown';
 
-//dummy data
+// dummy data
 
-connect('Bitcoin');
-connect('TRON');
-connect('Ripple');
-connect('Dash');
-connect('Ethereum');
-connect('Tezos');
+connect('Initial Test Ticker');
+// connect('TRON');
+// connect('Ripple');
+// connect('Dash');
+// connect('Ethereum');
+// connect('Tezos');
 
 class Menu extends PureComponent {
     constructor(props) {
@@ -27,13 +27,14 @@ class Menu extends PureComponent {
     }
     createTicker() {
         connect(this.state.inp);
+        this.setState({inp: ''});
     }
     render() {
         return (
             <div className="tickersMenu">
             <h3 className="title">Stock Blotter</h3>
                 <input type="text" className="tickerNameInput" placeholder="Ticker name" onChange={this.handleInput} value={this.state.inp} />
-                <Button height="150px" onClick={this.createTicker} variant="outline-light">Create Ticker</Button>
+                <Button height="150px" onClick={this.createTicker} variant="outline-light">Add Ticker</Button>
                 <Dropdown className="dropdown" />
             </div>
         );

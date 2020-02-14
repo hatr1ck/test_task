@@ -1,3 +1,5 @@
+import {combineReducers} from 'redux';
+
 const stockTicker = (state = {}, action) => {
     switch (action.type) {
         case 'SOCKET_SUCCESS_RESPONSE':
@@ -6,5 +8,18 @@ const stockTicker = (state = {}, action) => {
             return state;
     }
 };
+const updateInterval = (state = 10000, action) => {
+    switch (action.type) {
+        case 'CHANGE_INTERVAL':
+            return action.payload;
+        default:
+            return state;
+    }
+};
 
-export default stockTicker;
+const reducers = combineReducers({
+    stockTicker,
+    updateInterval
+});
+
+export default reducers;
