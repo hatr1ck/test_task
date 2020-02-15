@@ -25,7 +25,8 @@ class Menu extends PureComponent {
     handleInput(e) {
         this.setState({inp: e.target.value});
     }
-    createTicker() {
+    createTicker(e) {
+        e.preventDefault();
         connect(this.state.inp);
         this.setState({inp: ''});
     }
@@ -33,8 +34,10 @@ class Menu extends PureComponent {
         return (
             <div className="tickersMenu">
             <h3 className="title">Stock Blotter</h3>
-                <input type="text" className="tickerNameInput" placeholder="Ticker name" onChange={this.handleInput} value={this.state.inp} />
-                <Button height="150px" onClick={this.createTicker} variant="outline-light">Add Ticker</Button>
+            <form className="tickerForm" onSubmit={this.createTicker}>
+                <input className="tickerNameInput" placeholder="Ticker name" onChange={this.handleInput} value={this.state.inp} />
+                <Button type="submit" className="tickerButton" onClick={this.createTicker} variant="outline-light">Add Ticker</Button>
+            </form>
                 <Dropdown className="dropdown" />
             </div>
         );

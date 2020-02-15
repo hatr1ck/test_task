@@ -12,11 +12,20 @@
         flex:1;
         margin: 0 2px;
     }
-    .tickerNameInput{
+    .tickerForm{
         font-size:20px;
         height: 40px;
         margin: 0 2px;
         flex:2;
+        display:flex;
+        .tickerNameInput{
+            flex: 5;
+            margin: 0 2px;
+        }
+        .tickerButton{
+            flex: 2;
+            margin: 0 2px;
+        }
     }
     .dropdown{
         height: 40px;
